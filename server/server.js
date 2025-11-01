@@ -11,7 +11,7 @@ const app = express();
 const server = http.createServer(app);
 
 const allowedOrigins = [
-  "https://quick-chat-22sk.vercel.app", // ✅ Your frontend domain
+  "https://quick-chat-frontend-lovat.vercel.app", // ✅ Your frontend domain
 ];
 
 app.use(cors({
