@@ -40,9 +40,10 @@ app.use("/api/status",(req,res)=> res.send("Server is live"));
 app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter)
 await connectDB();
-if(process.env.NODE_ENV !== "production"){
-   const PORT = process.env.PORT || 5000;
-   server.listen(PORT, ()=> console.log("Server is listening at the PORT:"+PORT));
-}
+const PORT = process.env.PORT || 5000;
+server.listen(PORT, () => {
+    console.log(`✅ Server running on port ${PORT}`);
+});
+
 
 export default server
